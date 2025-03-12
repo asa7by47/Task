@@ -1,0 +1,84 @@
+{
+  "expo": {
+    "name": "Elevate",
+    "slug": "elevate",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/images/icon.png",
+    "scheme": "Elevate-bit68",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./src/assets/images/splash.png",
+      "resizeMode": "cover"
+    },
+    "updates": {
+      "checkAutomatically": "ON_ERROR_RECOVERY",
+      "url": "https://u.expo.dev/2dd50375-6a01-4fc2-9878-e5f4f50aa0c0"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "buildNumber": "1.0.0",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.bit68.Elevate",
+      "infoPlist": {
+        "CFBundleAllowMixedLocalizations": true
+      }
+    },
+    "android": {
+      "versionCode": 1,
+      "package": "com.bit68.Elevate",
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": ["android.permission.INTERNET"]
+    },
+    "locales": {
+      "en": "./src/i18n/en.json",
+      "ar": "./src/i18n/ar.json"
+    },
+    "plugins": [
+      "expo-localization",
+      [
+        "expo-notifications",
+        {
+          "icon": "./src/assets/images/notification-icon.png",
+          "color": "#ffffff"
+        }
+      ],
+      [
+        "react-native-fbsdk-next",
+        {
+          "appID": "555555555555555",
+          "clientToken": "9874eabd131f37119b99211c0ea0bb20",
+          "displayName": "Elevate",
+          "scheme": "fb555555555555555",
+          "autoLogAppEventsEnabled": false,
+          "isAutoInitEnabled": false,
+          "advertiserIDCollectionEnabled": false,
+          "iosUserTrackingPermission": "This identifier will be used to deliver personalized ads to you."
+        }
+      ],
+      ["@react-native-google-signin/google-signin"],
+      "@mmomtchev/expo-android-localized-app-name",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Elevate needs access to your camera to enable QR code scanning and provide a better experience."
+        }
+      ]
+    ],
+    "experiments": {
+      "tsconfigPaths": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2dd50375-6a01-4fc2-9878-e5f4f50aa0c0"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "owner": "bit68"
+  }
+}
