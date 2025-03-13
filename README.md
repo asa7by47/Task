@@ -14,3 +14,5 @@ then press ( S ) to run on Expo
 then scan the QR code to run the app 
 
 please download expo app version 51.0.0
+
+using RTK Query for integration with the backend 
