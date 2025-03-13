@@ -20,13 +20,13 @@ const rawBaseQuery = (baseUrl: string) =>
       const { token } = (getState() as RootState).auth;
       if (token && !headers.has("Authorization")) {
         // headers.set("Authorization", `Token ${token}`);
-        headers.set("Authorization", `Token`);
+        // headers.set("Authorization", `Token`);
       }
       return headers;
     },
   });
 
-// Create our baseQuery instance
+// // Create our baseQuery instance
 const baseQuery = async (
   args: FetchArgs,
   api: BaseQueryApi,

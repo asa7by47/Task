@@ -11,6 +11,7 @@ import RegisterationSchema from "@/schemas";
 import Specialization from "@/constants/Specialization";
 import { RegisterFormData } from "./types";
 import METRICS from "@/constants/Metrics";
+import { useLoginMutation } from "@/apis/services/projects";
 
 export default function Register() {
   const { control, handleSubmit } = useForm({
@@ -22,12 +23,18 @@ export default function Register() {
       specialization: "",
     },
   });
+
+  const [login] = useLoginMutation();
+
   const handleLogin = (data: RegisterFormData) => {
-    console.log("🚀 ~ handleLogin ~ data:", data);
-    loginHandler({
-      token: "token",
-      refreshToken: "refresh_token",
-    });
+    login(data)
+      .unwrap()
+      .then(() => {
+        loginHandler({
+          token: "token",
+          refreshToken: "refresh_token",
+        });
+      });
   };
   return (
     <View style={styles.container}>

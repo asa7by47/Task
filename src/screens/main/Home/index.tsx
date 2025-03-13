@@ -7,12 +7,14 @@ import Button from "@/components/atoms/Button";
 import METRICS from "@/constants/Metrics";
 import AddProjectModal from "@/components/organisms/AddProjectModal";
 import DebouncedSearchField from "@/components/molecules/DebouncedSearchField";
+import { useGetProjectsQuery } from "@/apis/services/projects";
 
 export default function HomeScreen() {
   const [isVisible, setVisible] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  console.log("🚀 ~ HomeScreen ~ searchQuery:", searchQuery);
+  console.log("🚀 ~ HomeScreen ~ searchQuerysssssssssssssss:", searchQuery);
 
+  const { data } = useGetProjectsQuery();
   const handleOpenModal = () => setVisible(true);
 
   const handleSearchChange = (query: string | undefined) => {
