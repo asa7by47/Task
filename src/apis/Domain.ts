@@ -1,3 +1,3 @@
-const DomainUrl = "https://elevate-rebuild.staging-bit68.com";
+const DomainUrl = "";
 
 export default DomainUrl;
